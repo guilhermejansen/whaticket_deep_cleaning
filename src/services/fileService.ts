@@ -1,22 +1,33 @@
 import fs from 'fs-extra';
 import path from 'path';
-import { loadConfig } from '../config';
+import archiver from 'archiver'; // Garanta que 'archiver' esteja instalado via npm
+import config from '../config';
+import { sendBackupToWebhook } from './webhookService';
 
-export const deleteOldFilesAndBackup = async (dir: string): Promise<void> => {
-  const { retentionTime } = loadConfig();
-  const files = await fs.readdir(dir);
+async function zipAndBackupFiles(companyDir: string, companyId: string): Promise<void> {
+  const zipFilePath = path.join('/tmp', `${companyId}.zip`);
+  const output = fs.createWriteStream(zipFilePath);
+  const archive = archiver('zip', { zlib: { level: 9 } });
 
-  for (const file of files) {
-    const filePath = path.join(dir, file);
-    const stats = await fs.stat(filePath);
+  archive.pipe(output);
+  archive.directory(companyDir, false);
+  await archive.finalize();
 
-    const expirationDate = new Date();
-    expirationDate.setMonth(expirationDate.getMonth() - retentionTime);
+  await sendBackupToWebhook(zipFilePath, companyId);
 
-    if (stats.mtime < expirationDate) {
-      // Aqui você deve implementar a lógica para backup do arquivo antes de deletar
-      // E depois deletar o arquivo
-      console.log(`${filePath} foi apagado.`);
+  // Após o sucesso do webhook, excluir arquivos
+  fs.removeSync(companyDir); // Tenha cuidado ao usar remoções sincronizadas
+}
+
+export async function processCompanyDirectories(): Promise<void> {
+  const companyDirs = await fs.readdir(config.publicDir);
+
+  for (const dir of companyDirs) {
+    const companyDirPath = path.join(config.publicDir, dir);
+    const stats = await fs.stat(companyDirPath);
+
+    if (stats.isDirectory()) {
+      await zipAndBackupFiles(companyDirPath, dir);
     }
   }
-};
+}

@@ -2,6 +2,35 @@
 
 Este projeto inclui um script de instalação automatizado para configurar a aplicação Whaticket Deep Cleaning, garantindo a limpeza e o backup eficientes de arquivos antigos.
 
+## 📁 Lógica de Processamento dos Diretórios das Companhias
+
+A aplicação Whaticket Deep Cleaning foi projetada para lidar com diretórios de companhias de forma individualizada, garantindo que cada companhia tenha seus arquivos processados de maneira isolada e segura.
+
+### Estrutura de Diretórios
+
+Cada companhia possui seu próprio diretório dentro do diretório principal `public`. O nome de cada diretório de companhia corresponde ao seu `companyId`, por exemplo:
+
+- `/home/deploy/multi100/backend/public/company1`
+- `/home/deploy/multi100/backend/public/company14`
+
+Essa estrutura permite que a aplicação identifique e trate cada conjunto de arquivos de forma independente, associando-os à companhia correta.
+
+### Processamento Individualizado
+
+Quando a rotina de limpeza é acionada, a aplicação percorre cada diretório de companhia dentro de `public`. Para cada diretório encontrado, a aplicação executa as seguintes ações:
+
+1. **Verificação de Arquivos Antigos:** A aplicação verifica se existem arquivos dentro do diretório da companhia que excedem o tempo de retenção configurado. Esse tempo de retenção é definido globalmente mas aplicado individualmente a cada companhia.
+
+2. **Backup e Envio via Webhook (Se Habilitado):** Se o webhook estiver habilitado e houver arquivos antigos, a aplicação compacta esses arquivos em um arquivo `.zip`, nomeando o arquivo zip com o `companyId` correspondente. O arquivo zip é então enviado para o webhook configurado.
+
+3. **Exclusão de Arquivos:** Após a confirmação de sucesso no envio do backup via webhook, os arquivos originais são excluídos do diretório da companhia, liberando espaço e mantendo a organização dos dados.
+
+### Tentativas de Envio para o Webhook
+
+Se o envio do backup para o webhook falhar, a aplicação tentará reenviar o backup mais 3 vezes antes de desistir e passar para o próximo diretório de companhia. Essa resiliência garante que problemas temporários de rede ou no servidor do webhook não impeçam a conclusão do processo de limpeza.
+
+Ao seguir essa lógica, a aplicação Whaticket Deep Cleaning assegura uma gestão eficiente e automatizada dos arquivos das companhias, mantendo os dados seguros e o sistema organizado.
+
 ## 📋 Etapas de Instalação
 
 ### 1. **Verificar e Instalar Git (se necessário)**

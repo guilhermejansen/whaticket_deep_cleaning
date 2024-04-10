@@ -1,18 +1,18 @@
-import fs from 'fs';
-import path from 'path';
+import dotenv from 'dotenv';
 
-interface AppConfig {
-  retentionTime: number;
-  webhookUrl: string;
+dotenv.config();
+
+interface Config {
+  retentionMonths: number;
+  webhookUrl: string | null;
+  publicDir: string;
 }
 
-const configFilePath = path.join(__dirname, '../../config.json');
+const config: Config = {
+  retentionMonths: parseInt(process.env.RETENTION_MONTHS || '6', 10),
+  webhookUrl: process.env.WEBHOOK_URL || null,
+  publicDir: '/home/setup/multi100/backend/public',
 
-export const loadConfig = (): AppConfig => {
-  if (!fs.existsSync(configFilePath)) {
-    throw new Error('Configuração não encontrada. Execute o script de instalação.');
-  }
-
-  const configData = fs.readFileSync(configFilePath);
-  return JSON.parse(configData.toString());
 };
+
+export default config;

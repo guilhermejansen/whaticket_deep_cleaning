@@ -12,17 +12,27 @@
     "type": "git",
     "url": "https://github.com/guilhermejansen/whaticket_deep_cleaning.git"
   },
-  "keywords": ["limpeza", "backup", "automatização"],
+  "keywords": [
+    "limpeza",
+    "backup",
+    "automatização"
+  ],
   "author": "Guilherme Jansen - Web Developer",
   "license": "MIT",
   "dependencies": {
+    "archiver": "^7.0.1",
+    "axios": "^1.6.8",
     "dotenv": "^16.4.5",
     "fs-extra": "^11.2.0",
     "node-cron": "^3.0.3",
     "pm2": "^5.3.1"
   },
   "devDependencies": {
+    "@types/archiver": "^6.0.2",
+    "@types/axios": "^0.14.0",
+    "@types/fs-extra": "^11.0.4",
     "@types/node": "^20.12.7",
+    "@types/node-cron": "^3.0.11",
     "ts-node": "^10.9.2",
     "typescript": "^5.4.4"
   }
