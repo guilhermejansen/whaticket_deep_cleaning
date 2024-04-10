@@ -1,6 +1,6 @@
 {
   "name": "whaticket-deep-cleaning",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Um projeto para automatizar a limpeza e backup de arquivos do public de cada compania.",
   "main": "dist/index.js",
   "scripts": {
@@ -13,17 +13,17 @@
     "url": "https://github.com/guilhermejansen/whaticket_deep_cleaning.git"
   },
   "keywords": ["limpeza", "backup", "automatização"],
-  "author": "Guilherme Jansen",
-  "license": "ISC",
+  "author": "Guilherme Jansen - Web Developer",
+  "license": "MIT",
   "dependencies": {
-    "dotenv": "^8.2.0",
-    "fs-extra": "^9.0.1",
-    "node-cron": "^2.0.3",
-    "pm2": "^4.4.0"
+    "dotenv": "^16.4.5",
+    "fs-extra": "^11.2.0",
+    "node-cron": "^3.0.3",
+    "pm2": "^5.3.1"
   },
   "devDependencies": {
-    "@types/node": "^14.0.27",
-    "ts-node": "^8.10.2",
-    "typescript": "^3.9.7"
+    "@types/node": "^20.12.7",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.4"
   }
 }
