@@ -1,3 +1,11 @@
-node_modules
-dist
+# Dependências
+node_modules/
+dist/
+build/
 package-lock.json
+.tmp
+.cache
+.env
+.vscode/
+*.swp
+*.swo

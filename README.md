@@ -10,8 +10,8 @@ A aplicação Whaticket Deep Cleaning foi projetada para lidar com diretórios d
 
 Cada companhia possui seu próprio diretório dentro do diretório principal `public`. O nome de cada diretório de companhia corresponde ao seu `companyId`, por exemplo:
 
-- `/home/deploy/multi100/backend/public/company1`
-- `/home/deploy/multi100/backend/public/company14`
+- `/home/deploy/whaticket/backend/public/company1`
+- `/home/deploy/whaticket/backend/public/company14`
 
 Essa estrutura permite que a aplicação identifique e trate cada conjunto de arquivos de forma independente, associando-os à companhia correta.
 
