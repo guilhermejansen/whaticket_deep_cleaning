@@ -4,20 +4,20 @@
 set -x
 
 # Definindo o diretório base novo
-NEW_BASE_DIR="/home/setup/multi100/backend/public"
+NEW_BASE_DIR="/home/deploy/whaticket/backend/public"
 
 # Definindo o diretório base antigo
 OLD_BASE_DIR="/root/backend/public"
 
 # Verificando e criando o diretório raiz (/multi100/backend), se necessário
-if [ ! -d "/home/setup/multi100/backend" ]; then
-  echo "Diretório /home/setup/multi100/backend não existe. Criando diretório..."
-  mkdir -p "/home/setup/multi100/backend"
+if [ ! -d "/home/deploy/whaticket/backend" ]; then
+  echo "Diretório /home/deploy/whaticket/backend não existe. Criando diretório..."
+  mkdir -p "/home/deploy/whaticket/backend"
   if [ $? -ne 0 ]; then
-    echo "Erro ao criar o diretório base /home/setup/multi100/backend. Verifique as permissões." >&2
+    echo "Erro ao criar o diretório base /home/deploy/whaticket/backend. Verifique as permissões." >&2
     exit 1
   else
-    echo "Diretório base /home/setup/multi100/backend criado com sucesso."
+    echo "Diretório base /home/deploy/whaticket/backend criado com sucesso."
   fi
 fi
 
