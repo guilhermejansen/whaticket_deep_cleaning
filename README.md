@@ -93,6 +93,7 @@ MINIO_SECRET_KEY=Xlc5kcU2rHBBwsTEOvYiiDe  # Chave secreta do MinIO S3
 MINIO_ENDPOINT=https://s3.exemplo.com  # Endpoint do MinIO S3
 S3_BUCKET_NAME=whaticket  # Nome do bucket no MinIO S3
 S3_ENABLED=true  # Ativação do envio para MinIO S3
+```
 
 ---
 
