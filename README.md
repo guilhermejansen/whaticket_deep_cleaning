@@ -97,7 +97,12 @@ S3_ENABLED=true  # Ativação do envio para MinIO S3
 
 ---
 
-[![Coffee QR Code](https://github.com/guilhermejansen/whaticket_deep_cleaning/raw/main/coffee-qrcode.png)](https://www.paypal.com/donate?hosted_button_id=K7YAM48FD4Y3Y)
+<div style="text-align: center;">
+    [![Coffee QR Code](https://github.com/guilhermejansen/whaticket_deep_cleaning/raw/main/coffee-qrcode.png)](https://www.paypal.com/ncp/payment/K7YAM48FD4Y3Y)
+    <br>
+    <a href="https://www.paypal.com/ncp/payment/K7YAM48FD4Y3Y" target="_blank">
+        <img src="https://www.paypalobjects.com/pt_BR/BR/i/btn/btn_donateCC_LG.gif" border="0" alt="Donate with PayPal">
+    </a>
+</div>
 
-<a href="https://www.paypal.com/donate?hosted_button_id=K7YAM48FD4Y3Y" target="_blank"><img src="https://www.paypalobjects.com/pt_BR/BR/i/btn/btn_donateCC_LG.gif" border="0" alt="Donate with PayPal"></a>
 
