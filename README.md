@@ -93,3 +93,10 @@ MINIO_SECRET_KEY=Xlc5kcU2rHBBwsTEOvYiiDe  # Chave secreta do MinIO S3
 MINIO_ENDPOINT=https://s3.exemplo.com  # Endpoint do MinIO S3
 S3_BUCKET_NAME=whaticket  # Nome do bucket no MinIO S3
 S3_ENABLED=true  # Ativação do envio para MinIO S3
+
+---
+
+[![Coffee QR Code](https://github.com/guilhermejansen/whaticket_deep_cleaning/raw/main/coffee-qrcode.png)](https://www.paypal.com/donate?hosted_button_id=K7YAM48FD4Y3Y)
+
+<a href="https://www.paypal.com/donate?hosted_button_id=K7YAM48FD4Y3Y" target="_blank"><img src="https://www.paypalobjects.com/pt_BR/BR/i/btn/btn_donateCC_LG.gif" border="0" alt="Donate with PayPal"></a>
+
