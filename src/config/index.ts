@@ -1,3 +1,4 @@
+// src/config/index.ts
 import dotenv from 'dotenv';
 
 dotenv.config();
@@ -19,9 +20,9 @@ const parseBool = (value: string | undefined, defaultValue: boolean): boolean =>
 }
 
 const config: Config = {
-  retentionMonths: parseInt(process.env.RETENTION_MONTHS || '6', 10),
+  retentionMonths: parseInt(process.env.RETENTION_MONTHS || '3', 10),
   webhookUrl: process.env.WEBHOOK_URL || null,
-  publicDir: process.env.PUBLIC_DIR || '/home/setup/multi100/backend/public',
+  publicDir: process.env.PUBLIC_DIR || '/home/deploy/whaticket/backend/public',
   webhookEnabled: parseBool(process.env.WEBHOOK_ENABLED, false),
   s3Enabled: parseBool(process.env.S3_ENABLED, false),
 };
