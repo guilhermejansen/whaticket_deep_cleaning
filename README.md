@@ -2,6 +2,8 @@
 
 Este projeto inclui um script de instalação automatizado para configurar a aplicação Whaticket Deep Cleaning, garantindo a limpeza e o backup eficientes de arquivos antigos em armazenamentos locais e em nuvem utilizando MinIO S3.
 
+### Baixe o script para seu diretorio no servidor ou local, /scripts/install.sh 
+
 ## 📁 Lógica de Processamento dos Diretórios das Companhias
 
 A aplicação Whaticket Deep Cleaning foi projetada para lidar com diretórios de companhias de forma individualizada, garantindo que cada companhia tenha seus arquivos processados de maneira isolada e segura.
