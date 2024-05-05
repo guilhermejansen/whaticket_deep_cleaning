@@ -1,3 +1,5 @@
+// src/services/webhookService.ts
+import { logger } from "../utils/Logger";
 import axios from 'axios';
 import FormData from 'form-data';
 import fs from 'fs';
@@ -5,11 +7,11 @@ import config from '../config';
 
 export async function sendBackupToWebhook(zipFilePath: string, companyId: string): Promise<void> {
   if (!config.webhookUrl) {
-    console.log(`URL do webhook não configurada, envio omitido para companyId: ${companyId}`);
+    logger.info(`URL do webhook não configurada, envio omitido para companyId: ${companyId}`);
     return;
   }
 
-  console.log(`Preparando para enviar backup para o webhook para companyId: ${companyId}`);
+  logger.info(`Preparando para enviar backup para o webhook para companyId: ${companyId}`);
   
   try {
     const fileBuffer = await fs.promises.readFile(zipFilePath);
@@ -26,12 +28,12 @@ export async function sendBackupToWebhook(zipFilePath: string, companyId: string
 
     let attempts = 0;
     while (attempts < 3) {
-      console.log(`Tentando enviar backup para o webhook, tentativa ${attempts + 1}, para companyId: ${companyId}`);
+      logger.info(`Tentando enviar backup para o webhook, tentativa ${attempts + 1}, para companyId: ${companyId}`);
       const response = await axios.post(config.webhookUrl, formData, { headers: { ...formData.getHeaders() } });
-      console.log(`Resposta do webhook: ${response.status}`);
+      logger.info(`Resposta do webhook: ${response.status}`);
 
       if (response.status === 200) {
-        console.log(`Backup enviado com sucesso para o webhook para companyId: ${companyId}`);
+        logger.info(`Backup enviado com sucesso para o webhook para companyId: ${companyId}`);
         break;
       } else {
         throw new Error(`HTTP status: ${response.status}`);
@@ -40,9 +42,9 @@ export async function sendBackupToWebhook(zipFilePath: string, companyId: string
     }
 
     if (attempts === 3) {
-      console.error(`Falha ao enviar backup após 3 tentativas para companyId: ${companyId}`);
+      logger.error(`Falha ao enviar backup após 3 tentativas para companyId: ${companyId}`);
     }
   } catch (error) {
-    console.error(`Falha ao enviar backup para o webhook para companyId: ${companyId}: ${error}`);
+    logger.error(`Falha ao enviar backup para o webhook para companyId: ${companyId}: ${error}`);
   }
 }

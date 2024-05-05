@@ -1,0 +1,42 @@
+[32minfo[39m: Aplicação de limpeza iniciada. {"timestamp":"29-04-2024 21:55:06"}
+[32minfo[39m: Iniciando a limpeza programada de arquivos... {"timestamp":"29-04-2024 21:56:00"}
+[32minfo[39m: Buscando diretórios em: /home/deploy/multi100/backend/public {"timestamp":"29-04-2024 21:56:00"}
+[32minfo[39m: Encontrados 0 diretórios para processamento. {"timestamp":"29-04-2024 21:56:00"}
+[32minfo[39m: Iniciando a limpeza programada de arquivos... {"timestamp":"29-04-2024 21:57:00"}
+[32minfo[39m: Buscando diretórios em: /home/deploy/multi100/backend/public {"timestamp":"29-04-2024 21:57:00"}
+[32minfo[39m: Encontrados 0 diretórios para processamento. {"timestamp":"29-04-2024 21:57:00"}
+whaticket deep cleaning | INFO [29/04/2024 21:58:52]: Aplicação de limpeza iniciada.
+whaticket deep cleaning | INFO [29/04/2024 21:59:00]: Iniciando a limpeza programada de arquivos...
+whaticket deep cleaning | INFO [29/04/2024 21:59:00]: Buscando diretórios em: /home/deploy/multi100/backend/public
+whaticket deep cleaning | INFO [29/04/2024 21:59:00]: Encontrados 0 diretórios para processamento.
+WHATICKET-DEEP-CLEANING | INFO [29/04/2024 22:00:20]: Aplicação de limpeza iniciada.
+WHATICKET-DEEP-CLEANING | INFO [29/04/2024 22:01:00]: Iniciando a limpeza programada de arquivos...
+WHATICKET-DEEP-CLEANING | INFO [29/04/2024 22:01:00]: Buscando diretórios em: /home/deploy/multi100/backend/public
+WHATICKET-DEEP-CLEANING | INFO [29/04/2024 22:01:00]: Encontrados 0 diretórios para processamento.
+WHATICKET DEEP CLEANING | INFO [29/04/2024 22:01:19]: Aplicação de limpeza iniciada.
+WHATICKET DEEP CLEANING | INFO [29/04/2024 22:02:00]: Iniciando a limpeza programada de arquivos...
+WHATICKET DEEP CLEANING | INFO [29/04/2024 22:02:00]: Buscando diretórios em: /home/deploy/multi100/backend/public
+WHATICKET DEEP CLEANING | INFO [29/04/2024 22:02:00]: Encontrados 0 diretórios para processamento.
+WHATICKET DEEP CLEANING | INFO [29/04/2024 22:03:00]: Aplicação de limpeza iniciada.
+undefined | INFO [29/04/2024 22:05:17]: Aplicação de limpeza iniciada.
+undefined | INFO [29/04/2024 22:06:00]: Iniciando a limpeza programada de arquivos...
+undefined | INFO [29/04/2024 22:06:00]: Buscando diretórios em: /home/deploy/multi100/backend/public
+undefined | INFO [29/04/2024 22:06:00]: Encontrados 0 diretórios para processamento.
+undefined | INFO [29/04/2024 22:07:00]: Iniciando a limpeza programada de arquivos...
+undefined | INFO [29/04/2024 22:07:00]: Buscando diretórios em: /home/deploy/multi100/backend/public
+undefined | INFO [29/04/2024 22:07:00]: Encontrados 0 diretórios para processamento.
+[WHATICKET DEEP CLEANING] | INFO [29/04/2024 22:07:47]: Aplicação de limpeza iniciada.
+[WHATICKET DEEP CLEANING] | INFO [29/04/2024 22:08:00]: Iniciando a limpeza programada de arquivos...
+[WHATICKET DEEP CLEANING] | INFO [29/04/2024 22:08:00]: Buscando diretórios em: /home/deploy/multi100/backend/public
+[WHATICKET DEEP CLEANING] | INFO [29/04/2024 22:08:00]: Encontrados 0 diretórios para processamento.
+[WHATICKET DEEP CLEANING] | INFO [29/04/2024 22:09:00]: Iniciando a limpeza programada de arquivos...
+[WHATICKET DEEP CLEANING] | INFO [29/04/2024 22:09:00]: Buscando diretórios em: /home/deploy/multi100/backend/public
+[WHATICKET DEEP CLEANING] | INFO [29/04/2024 22:09:00]: Encontrados 0 diretórios para processamento.
+[WHATICKET DEEP CLEANING] | INFO [29/04/2024 22:10:00]: Iniciando a limpeza programada de arquivos...
+[WHATICKET DEEP CLEANING] | INFO [29/04/2024 22:10:00]: Buscando diretórios em: /home/deploy/multi100/backend/public
+[WHATICKET DEEP CLEANING] | INFO [29/04/2024 22:10:00]: Encontrados 0 diretórios para processamento.
+[WHATICKET DEEP CLEANING] | INFO [29/04/2024 22:11:00]: Iniciando a limpeza programada de arquivos...
+[WHATICKET DEEP CLEANING] | INFO [29/04/2024 22:11:00]: Buscando diretórios em: /home/deploy/multi100/backend/public
+[WHATICKET DEEP CLEANING] | INFO [29/04/2024 22:11:00]: Encontrados 0 diretórios para processamento.
+INFO [29/04/2024 22:33:48]: Aplicação de limpeza iniciada.
+INFO [29/04/2024 22:33:59]: Aplicação de limpeza iniciada.

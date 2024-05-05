@@ -1,5 +1,6 @@
 // src/index.ts
+import { logger } from "./utils/Logger";
 import { setupCronJobs } from './utils/cronJobs';
 
 setupCronJobs();
-console.log('Aplicação de limpeza iniciada.');
+logger.info('Aplicação de limpeza iniciada.');
